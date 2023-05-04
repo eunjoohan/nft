@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=devece-wdidth, initial-scale=1.0">
+<title>은주 소개</title>
+<link rel="stylesheet" href="./css/bootstrap.css"/>
+<link rel="icon" href="./images/logo.png"/>
+
+<style type="text/css">
+	.jumbotron{
+		background-image:url(./images/jumbotronBackground.jpg);
+		background-size:cover;
+		color:white;
+		text-shadow:0.2em 0.2em 0.2em black;
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse"> <!-- navbar-default를 inverse로 변경하면 검정으로 바꿀수 있음. w3schools참고  -->
+		<div class:"container-fluid">
+			<!-- 네비게이션 헤더 -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collpased" data-toggle="collapse" data-target="#nav-toggle" aria-expanded="false">
+					<span class="sr-only"></span>
+					
+					<!-- class="icon-bar": 버튼 내부에 표시할 줄의 개수만큼 지정한다. -->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				
+				</button>
+				<a class="navbar-brand" href="./index.html">은주의 NFT</a>
+			</div>
+					
+			<!-- 네비게이션 내용 -->	
+			<!-- 브라우저가 작아지면 표시되지 않다가 네비게이션 헤더에 만든 버튼이 클릭되면 토글된다.   -->	
+			<div class="collapse navbar-collapse" id="nav-toggle">
+				<!-- 네비게이션 왼쪽에 표시할 내용  -->
+				<ul class="nav navbar-nav">
+					<li class="active"> <!-- 선택된 상태로 설정한다.  -->
+						<a href="./index.html">NFT 소개</a>
+					</li>
+					<li>
+						<a href="./instructor.html">은주 소개</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true"
+						aria-expended>은주의 NFT<span class="caret"></span> <!--아래 방향 세모 아이콘 표시-->
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./lecture.html?lectureName=C">꼼펭</a>
+							<li><a href="./lecture.html?lectureName=Java">자유의 꼼신상</a>
+						</ul>
+					</li>
+				</ul>
+				<!-- 검색 폼  -->
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-contrl" placeholder ="검색할 내용을 입력하세요"/>
+					</div>
+					<button type="button" class="btn btn-primary"> 검색 </button>
+				</form>
+				<!-- 네비게이션 오른쪽에 표시할 내용  -->
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true"
+						aria-expended>접속하기<span class="caret"></span> <!--아래 방향 세모 아이콘 표시-->
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./loginForm.html">로그인</a>
+							<li><a href="./resterForm.html">회원가입</a>
+						</ul>
+				</div> 
+			</div>
+		</div>
+	</nav><!-- 네비게이션 끝  -->
+	<!-- 여기부터  -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;&nbsp;자기 소개
+						</h3>
+					</div>
+					
+					<div class="panel-body">
+						<div class="media">
+							
+							<div class="media-left">
+								<img class="media-object" src="./images/han.jpg" width="150px" height="150px">
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">한은주(한꼬미)</h4>
+								컴퓨터 관련 책을 출판하는 출판사에 다니다가<br/>
+								그만두고 학원 강의를 약 20년 가까이 하다가<br/>
+								공부하려고 학교 다니고 있음.
+							</div>
+						</div>
+					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<td>작성자명</td>
+								<td>NFT번호</td>
+								<td>NFT제목</td>
+								<td>업로드날짜</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>한꼬미</td>
+								<td>1</td>
+								<td>
+								<a href="./peng.html">꼼펭</a>
+								</td>
+								<td>2023-5-4</td>
+							</tr>
+							<tr>
+								<td>한꼬미</td>
+								<td>2</td>
+								<td>
+								<a href="./liberty.html">자유의 꼼신상</a>
+								</td>
+								<td>2023-5-4</td>
+							</tr>
+														
+						</tbody>
+					</table>	
+				</div>
+			</div>
+		</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;&nbsp;NFT 소개
+							</h3>
+						</div>
+						<div class="panel-body">
+							<div class="media-body">
+								- 꼼펭 : 한꼬미가 키우는 펭귄. 펭수만큼 유명해질까?<br/>
+								- 자유의 꼼신상 : 원래는 개인 카페 대문에 걸려이썬 그림인데 <br/>
+								&nbsp;&nbsp;&nbsp;내 얼굴 합성해 넣어서 더 애정이 가는편.<br/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+	<!-- 여기까지 eunjoo.html에 코딩해 넣는 내용  -->
+	
+	
+	<footer style="background-color:#000000; color:#ffffff;">
+		<div class="container">
+			<div class="row">
+				<!-- 2 -->
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>Copyright &copy;</h5>
+						<h5>한은주(Han Eun Joo)</h5>
+					</div>
+				<!-- 4 -->
+					<div class="col-sm-4">
+						<h5>대표자 소개</h5>
+						<h5> 저는 은주의 NFT 한은주입니다.</h5>
+					</div>
+					
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>네비게이션</h5>
+						<div class="list-group">
+							<a href="./index.html" class="list-group-item">NFT 소개</a>
+							<a href="./eunjoo.html" class="list-group-item">은주 소개</a>
+							<a href="./lecture.html?lectureName=C" class="list-group-item">은주의 NFT</a>
+						</div>
+					</div>
+					<!--2  -->
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>SNS</h5>
+						<div class="list-group">
+							<a href="#" class="list-group-item">페이스북</a>
+							<a href="#" class="list-group-item">유튜브</a>
+							<a href="#" class="list-group-item">네이버TV</a>
+						</div>
+					</div>
+				<!-- 2 -->
+				<div class="col-sm-2">
+					<h5 style="text-align:center;">
+						<span class="glyphicon glyphicon-ok"></span>&nbsp; by 한은주
+					</h5>				
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
