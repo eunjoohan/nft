@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=devece-wdidth, initial-scale=1.0">
+<title>부트스트랩 웹페이지</title>
+<link rel="stylesheet" href="./css/bootstrap.css"/>
+<link rel="icon" href="./images/logo.png"/>
+
+<style type="text/css">
+	.jumbotron{
+		background-image:url(./images/jumbotronBackground.jpg);
+		background-size:cover;
+		color:white;
+		text-shadow:0.2em 0.2em 0.2em black;
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse"> <!-- navbar-default를 inverse로 변경하면 검정으로 바꿀수 있음. w3schools참고  -->
+		<div class:"container-fluid">
+			<!-- 네비게이션 헤더 -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collpased" data-toggle="collapse" data-target="#nav-toggle" aria-expanded="false">
+					<span class="sr-only"></span>
+					
+					<!-- class="icon-bar": 버튼 내부에 표시할 줄의 개수만큼 지정한다. -->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				
+				</button>
+				<a class="navbar-brand" href="./index.html">은주의 NFT</a>
+			</div>
+					
+			<!-- 네비게이션 내용 -->	
+			<!-- 브라우저가 작아지면 표시되지 않다가 네비게이션 헤더에 만든 버튼이 클릭되면 토글된다.   -->	
+			<div class="collapse navbar-collapse" id="nav-toggle">
+				<!-- 네비게이션 왼쪽에 표시할 내용  -->
+				<ul class="nav navbar-nav">
+					<li class="active"> <!-- 선택된 상태로 설정한다.  -->
+						<a href="./index.html">NFT 소개</a>
+					</li>
+					<li>
+						<a href="./instructor.html">은주 소개</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true"
+						aria-expended>은주의 NFT<span class="caret"></span> <!--아래 방향 세모 아이콘 표시-->
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="http://52.79.61.44:8080/content?bid=1">꼼펭</a>
+							<li><a href="http://52.79.61.44:8080/content?bid=2">자유의 꼼신상</a>
+						</ul>
+					</li>
+				</ul>
+				<!-- 검색 폼  -->
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-contrl" placeholder ="검색할 내용을 입력하세요"/>
+					</div>
+					<button type="button" class="btn btn-primary"> 검색 </button>
+				</form>
+				<!-- 네비게이션 오른쪽에 표시할 내용  -->
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true"
+						aria-expended>접속하기<span class="caret"></span> <!--아래 방향 세모 아이콘 표시-->
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./loginForm.html">로그인</a>
+							<li><a href="./registerForm.html">회원가입</a>
+						</ul>
+				</div> 
+			</div>
+		</div>
+	</nav><!-- 네비게이션 끝  -->
+	<!-- 여기부터  -->
+		<!--  
+			리스트 그룹
+			리스트 구룹은 같은 성질을 가지는 목록을 담는 그룹을 의미하는 클래스로 각각의 정보는 자유롭게 링크를 가지는 형태로
+			들어갈 수 있다. 
+			부트스트랩에서는 단순히 클래스로 지정해주면 즉시 사용이 가능하다.
+		-->
+		<div class="containter">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;&nbsp;NFT 목록
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+					<div class="col-md-12">
+						<ul class="list-group">
+							<a class="list-group-item active" href="#">은주의 NFT 리스트</a>
+							<a class="list-group-item" href="http://52.79.61.44:8080/content?bid=1">꼼펭</a>
+							<a class="list-group-item" href="http://52.79.61.44:8080/content?bid=2">자유의 꼼신상</a>
+						</ul>
+					</div>
+			</div>
+				<div class="containter">
+					<div class="row">
+						
+							<div class="embed-responsive embed-responsive-16by9 col-lg-12">
+								<iframe class="embed-responsive-item" src="http://52.79.61.44:8080/lists"></iframe>
+							</div>
+						
+					</div>				
+				</div>
+				
+				
+		</div>
+		
+	<!-- 여기까지 lecture.html에 코딩해 넣는 내용  -->
+	<footer style="background-color:#000000; color:#ffffff;">
+		<div class="container">
+			<div class="row">
+				<!-- 2 -->
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>Copyright &copy;</h5>
+						<h5>한은주(Han Eun Joo)</h5>
+					</div>
+				<!-- 4 -->
+					<div class="col-sm-4">
+						<h5>대표자 소개</h5>
+						<h5> 저는 은주의 NFT 한은주입니다.</h5>
+					</div>
+					
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>네비게이션</h5>
+						<div class="list-group">
+							<a href="./index.html" class="list-group-item">NFT 소개</a>
+							<a href="./instructor.html" class="list-group-item">은주 소개</a>
+							<a href="./lecture.html?lectureName=C" class="list-group-item">은주의 NFT</a>
+						</div>
+					</div>
+					<!--2  -->
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>SNS</h5>
+						<div class="list-group">
+							<a href="#" class="list-group-item">페이스북</a>
+							<a href="#" class="list-group-item">유튜브</a>
+							<a href="#" class="list-group-item">네이버TV</a>
+						</div>
+					</div>
+				<!-- 2 -->
+				<div class="col-sm-2">
+					<h5 style="text-align:center;">
+						<span class="glyphicon glyphicon-ok"></span>&nbsp; by 한은주
+					</h5>				
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
