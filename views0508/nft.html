@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=devece-wdidth, initial-scale=1.0">
+<title>꼼펭</title>
+<link rel="stylesheet" href="./css/bootstrap.css"/>
+<link rel="icon" href="./images/logo.png"/>
+
+<style type="text/css">
+	.jumbotron{
+		background-image:url(./images/jumbotronBackground.jpg);
+		background-size:cover;
+		color:white;
+		text-shadow:0.2em 0.2em 0.2em black;
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+<H2> Add NFT List</H2>
+<form method=post action=/board>
+        <label>제목</label>
+        <input type=text name=title size=100><br>
+        <label>NFT 주소</label>
+        <input type=text name=url size=160><br>
+        <label>그림주소</label>
+        <input type=text name=imageUrl size=100><br>
+        <label>내용</label><br>
+        <textarea name=content rows="5" cols="100"></textarea><br>
+        <label>패스워드</label>
+        <input type=password name=pw><br>
+        <input type=submit>
+</form>
+</body>
+</html>
+
