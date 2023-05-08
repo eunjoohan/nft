@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=devece-wdidth, initial-scale=1.0">
+<title>꼼펭</title>
+<link rel="stylesheet" href="./css/bootstrap.css"/>
+<link rel="icon" href="./images/logo.png"/>
+
+<style type="text/css">
+	.jumbotron{
+		background-image:url(./images/jumbotronBackground.jpg);
+		background-size:cover;
+		color:white;
+		text-shadow:0.2em 0.2em 0.2em black;
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+    <h1><%=name%></h1>
+    <form method=post action='/edit?bid=<%=board.id%>'>
+    <table>
+    <tr><td>id</td><td><%=board.id%></td></tr>
+    <tr><td>title</td><td><input type="text" name=title value="<%=board.title%>" size=100></td></tr>
+    <tr><td>url</td><td><input type="text" name=url value="<%=board.url%>" size=160></td></tr>
+    <tr><td>image url</td><td><input type="text" name=imageUrl value="<%=board.imageUrl%>" size=100></td></tr>
+    <tr><td>content</td><td><textarea name=content cols=100><%=board.content%></textarea><br></td></tr>
+    
+    <tr><td>
+    <tr><td>password</td><td><input type="password" name=pw></td></tr>
+    
+    <tr><td><input type="submit" value=수정></td><td></td></tr>
+    </table>
+    </form>
+</body>
