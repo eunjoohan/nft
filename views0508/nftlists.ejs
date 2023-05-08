@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=devece-wdidth, initial-scale=1.0">
+<title>꼼펭</title>
+<link rel="stylesheet" href="./css/bootstrap.css"/>
+<link rel="icon" href="./images/logo.png"/>
+
+<style type="text/css">
+	.jumbotron{
+		background-image:url(./images/jumbotronBackground.jpg);
+		background-size:cover;
+		color:white;
+		text-shadow:0.2em 0.2em 0.2em black;
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+    <h1><%=name%></h1>
+    <table border=1  style="border-collapse:collapse">
+    <tr><th>id</th><th>Title</th>
+        <th>Image</th><th>Site</th>
+        <th>Content</th><th>likeCount</th></tr>
+    <% boards.forEach(function(list){ %>
+        <tr><td><%=list.id%></td><td><a href="/content?bid=<%=list.id%>"><%=list.title%></a></td>
+            </td><td><img width=100 src="<%=list.imageUrl%>"></td>
+            </td><td><a href="<%=list.url%>"><%=list.imageUrl.split('/')[2]%></a></td>
+            <td><%=list.content%></td>
+            <td><%=list.likeCount%></td></tr>
+    <% }) %>
+    </table>
+    <a href="nft.html">NFT 추가</a>
+</body>
+</html>
