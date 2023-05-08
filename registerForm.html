@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=devece-wdidth, initial-scale=1.0">
+<title>회원가입</title>
+<link rel="stylesheet" href="./css/bootstrap.css"/>
+<link rel="icon" href="./images/logo.png"/>
+
+<style type="text/css">
+	.jumbotron{
+		background-image:url(./images/jumbotronBackground.jpg);
+		background-size:cover;
+		color:white;
+		text-shadow:0.2em 0.2em 0.2em black;
+	}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<!--  -->
+<style type="text/css">
+/*
+body {
+    padding-top: 90px;
+}
+*/
+.panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+	color: #029f5b;
+	font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.btn-login {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+
+.btn-register {
+	background-color: #1CB94E;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+
+</style>
+<!-- login.register script  -->
+<script type="text/javascript">
+$(function() {
+
+    $('#login-form-link').click(function(e) {
+		$("#login-form").delay(100).fadeIn(100);
+ 		$("#register-form").fadeOut(100);
+		$('#register-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#register-form-link').click(function(e) {
+		$("#register-form").delay(100).fadeIn(100);
+ 		$("#login-form").fadeOut(100);
+		$('#login-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+
+});
+
+
+</script>
+
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse"> <!-- navbar-default를 inverse로 변경하면 검정으로 바꿀수 있음. w3schools참고  -->
+		<div class:"container-fluid">
+			<!-- 네비게이션 헤더 -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collpased" data-toggle="collapse" data-target="#nav-toggle" aria-expanded="false">
+					<span class="sr-only"></span>
+					
+					<!-- class="icon-bar": 버튼 내부에 표시할 줄의 개수만큼 지정한다. -->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				
+				</button>
+				<a class="navbar-brand" href="./index.html">은주의 NFT</a>
+			</div>
+					
+			<!-- 네비게이션 내용 -->	
+			<!-- 브라우저가 작아지면 표시되지 않다가 네비게이션 헤더에 만든 버튼이 클릭되면 토글된다.   -->	
+			<div class="collapse navbar-collapse" id="nav-toggle">
+				<!-- 네비게이션 왼쪽에 표시할 내용  -->
+				<ul class="nav navbar-nav">
+					<li class="active"> <!-- 선택된 상태로 설정한다.  -->
+						<a href="http://52.79.61.44:8080/lists">NFT 소개</a>
+					</li>
+					<li>
+						<a href="./eunjoo.html">은주 소개</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true"
+						aria-expended>은주의NFT<span class="caret"></span> <!--아래 방향 세모 아이콘 표시-->
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./peng.html">꼼펭</a>
+							<li><a href="./libertty.html">자유의 꼼신상</a>
+						</ul>
+					</li>
+				</ul>
+				<!-- 검색 폼  -->
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-contrl" placeholder ="검색할 내용을 입력하세요"/>
+					</div>
+					<button type="button" class="btn btn-primary"> 검색 </button>
+				</form>
+				<!-- 네비게이션 오른쪽에 표시할 내용  -->
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-hashpopup="true"
+						aria-expended>접속하기<span class="caret"></span> <!--아래 방향 세모 아이콘 표시-->
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="./loginForm.html">로그인</a>
+							<li><a href="./registerForm.html">회원가입</a>
+						</ul>
+				</div> 
+			</div>
+		</div>
+	</nav><!-- 네비게이션 끝  -->
+	<!-- 여기부터  -->
+	<!-- bootstrap login form example검색해서 -->
+		<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" id="login-form-link">로그인</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" class="active" id="register-form-link">회원가입</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display:none;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="아이디를 입력하세요" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="비밀번호를 입력하세요">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember">아이디 저장</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="로그인">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">비밀번호를 잊으셨나요?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="아이디" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="이메일 주소" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="비밀번호">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="비밀번호 확인">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="회원가입">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 여기까지 로긴폼 -->
+	
+	
+	<footer style="background-color:#000000; color:#ffffff;">
+		<div class="container">
+			<div class="row">
+				<!-- 2 -->
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>Copyright &copy;</h5>
+						<h5>한은주(Han Eun Joo)</h5>
+					</div>
+				<!-- 4 -->
+					<div class="col-sm-4">
+						<h5>대표자 소개</h5>
+						<h5> 저는 은주의 NFT 한은주입니다.</h5>
+					</div>
+					
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>네비게이션</h5>
+						<div class="list-group">
+							<a href="http://52.79.61.44:8080/lists" class="list-group-item">NFT 소개</a>
+							<a href="./eunjoo.html" class="list-group-item">은주 소개</a>
+							<a href="http://52.79.61.44:8080/lists" class="list-group-item">은주의 NFT</a>
+						</div>
+					</div>
+					<!--2  -->
+					<div class="col-sm-2" style="text-align:center;">
+						<h5>SNS</h5>
+						<div class="list-group">
+							<a href="#" class="list-group-item">페이스북</a>
+							<a href="#" class="list-group-item">유튜브</a>
+							<a href="#" class="list-group-item">네이버TV</a>
+						</div>
+					</div>
+				<!-- 2 -->
+				<div class="col-sm-2">
+					<h5 style="text-align:center;">
+						<span class="glyphicon glyphicon-ok"></span>&nbsp; by 한은주
+					</h5>				
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
